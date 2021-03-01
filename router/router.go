@@ -51,7 +51,6 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	{
 		u := admin.Group("user")
 		{
-			u.GET("", nil)
 			u.DELETE("/:id", user.Delete) //删除用户
 			u.PUT("/:id", user.Update)    // 更新用户
 			u.GET("", user.List)          //用户列表
